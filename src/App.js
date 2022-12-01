@@ -14,7 +14,8 @@ function App() {
     <div className="App">
       <Navbar></Navbar>
       <Routes>
-        <Route path='signup' element={<Signup/>}></Route>
+        <Route path='/' element={<Signup/>}></Route>
+        <Route index path='signup' element={<Signup/>}></Route>
         <Route path='login' element={<Login/>}></Route>
         <Route path='attendance' element={<Attendance/>}></Route>
       </Routes>
