@@ -1,0 +1,104 @@
+.signup {
+    text-align: center;
+}
+
+.peopleImage {
+    max-width: 612px;
+    width: 60%;
+    padding-right: 20px;
+}
+
+.peopleImage>img {
+    width: 100%;
+    height: auto;
+}
+
+.form-container {
+    position: absolute;
+    right: 35px;
+    max-width: 516px;
+    width: 40%;
+    min-height: 630px;
+    height: 95vh;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFFFFF;
+    box-shadow: 1px -10px 25px rgba(201, 201, 201, 0.25), -1px 10px 25px rgba(147, 147, 147, 0.25);
+}
+
+.sign-up-form {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.form-container>form>input {
+    display: block;
+    margin: 00 auto 50px auto;
+    width: 70%;
+    border: none;
+    border-bottom: 1px solid #A4A4A4;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #B4B4B4;
+}
+
+.buttons {
+    position: relative;
+}
+
+.next-step-btn {
+    width: 142px;
+    height: 49px;
+    background: #1678CB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.back-btn {
+    position: absolute;
+    left: 90px;
+    bottom: 15px;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    color: #767676;
+    cursor: pointer;
+}
+
+.next-step-btn>img {
+    margin-left: 5px;
+}
+
+/* Responsive Styles */
+
+@media only screen and (max-width: 900px) {
+
+    .peopleImage {
+        margin: 0 auto;
+    }
+
+    .form-container {
+        position: static;
+        padding: 30px 10px;
+        max-width: 516px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        transform: translateY(0);
+    }
+}
