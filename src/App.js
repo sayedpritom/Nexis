@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar/Navbar';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './Pages/Login/Login';
+import Attendance from './Pages/Attendance/Attendance';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='signup' element={<Signup/>}></Route>
         <Route path='login' element={<Login/>}></Route>
+        <Route path='attendance' element={<Attendance/>}></Route>
       </Routes>
       <ToastContainer />
     </div>

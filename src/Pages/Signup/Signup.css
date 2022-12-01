@@ -84,6 +84,35 @@
     margin-left: 5px;
 }
 
+.eight-character {
+    margin-top: -45px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7E7E7E;
+}
+
+.already-have-account {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #7E7E7E;
+    margin-top: 100px;
+}
+
+
+.already-have-account>a {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    color: #1678CB;
+
+}
+
 /* Responsive Styles */
 
 @media only screen and (max-width: 900px) {

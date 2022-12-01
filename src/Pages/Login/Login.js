@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import peopleImage from '../../Images/people.png'
 import arrow from '../../Images/Arrow.svg'
 import { toast } from 'react-toastify';
@@ -6,7 +7,7 @@ import './Login.css'
 
 
 const Login = () => {
-
+    let navigate = useNavigate();
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -24,12 +25,10 @@ const Login = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
                 localStorage.setItem("access_token", data.access_token)
-                toast.success(data.success)
+                navigate('/attendance')
             })
     }
-
 
     return (
         <div className='signup'>

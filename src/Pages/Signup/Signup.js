@@ -3,6 +3,7 @@ import peopleImage from '../../Images/people.png'
 import arrow from '../../Images/Arrow.svg'
 import { toast } from 'react-toastify';
 import './Signup.css'
+import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
@@ -64,6 +65,7 @@ const Signup = () => {
                 {index === 1 &&
                     <form onSubmit={handleSubmitNames}>
                         <input required autoFocus onChange={(e) => setFirstName(e.target.value)} type="text" value={firstName} placeholder='Write First Name' />
+                        <p className='eight-character'>Your password must be 8 character</p>
                         <br />
                         <input required onChange={(e) => setLastName(e.target.value)} type="text" value={lastName} placeholder='Write Last Name' />
                         <div className="buttons">
@@ -89,6 +91,7 @@ const Signup = () => {
                             <button type='submit' className='next-step-btn'>Next Step <img src={arrow} alt="" /></button>
                         </div>
                     </form>}
+                <p className='already-have-account'>Already have an account? <Link to="/login">Login here</Link> </p>
             </div>
         </div>
     );
