@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import peopleImage from '../../Images/people.png'
 import arrow from '../../Images/Arrow.svg'
-import { toast } from 'react-toastify';
 import './Signup.css'
 import { Link } from 'react-router-dom';
 
 
 const Signup = () => {
-    const [responseData, setResponseData] = useState("false");
-    const [loading, setLoading] = useState(false);
 
     const [index, setIndex] = useState(1)
     const [firstName, setFirstName] = useState("")
@@ -41,16 +38,13 @@ const Signup = () => {
     const handleSubmitPassword = (e) => {
         e.preventDefault()
 
-        setLoading(true)
-
         fetch(`https://test.nexisltd.com/signup`, {
             method: 'POST',
             body: JSON.stringify(user)
         })
             .then(response => response.json())
             .then(data => {
-                setLoading(false)
-                toast.success(data.success)
+                console.log(data);
             })
     }
 
