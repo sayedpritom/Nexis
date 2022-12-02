@@ -28,8 +28,6 @@ const Attendance = () => {
             })
     }, [])
 
-    console.log(attendance);
-
     if (loading) {
         return <Loading />
     }

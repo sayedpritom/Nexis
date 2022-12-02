@@ -27,8 +27,6 @@ const Signup = () => {
         setIndex(3)
     }
 
-    console.log(firstName, lastName, phone, email, password);
-
     const user = {
         "first_name": firstName,
         "last_name": lastName,
@@ -53,8 +51,6 @@ const Signup = () => {
     }
 
 
-
-
     return (
         <div className='signup'>
             <div className='peopleImage'><img src={peopleImage} alt="" /></div>
@@ -76,8 +72,8 @@ const Signup = () => {
                         <br />
                         <input required type='email' onChange={(e) => setEmail(e.target.value)} value={email} placeholder='Write Email Address' />
                         <div className="buttons">
-                            <p className='back-btn' onClick={() => setIndex(1)}>Back</p>
                             <button type='submit' className='next-step-btn'>Next Step <img src={arrow} alt="" /></button>
+                            <p className='back-btn' onClick={() => setIndex(1)}>Back</p>
                         </div>
                     </form>}
                 {index === 3 &&
@@ -85,8 +81,8 @@ const Signup = () => {
                         <input required autoFocus onChange={(e) => setPassword(e.target.value)} type="text" pattern="().{8,}" title="Must contain at least 8 or more characters" value={password} placeholder='Write Password' />
                         <br />
                         <div className="buttons">
-                            <p className='back-btn' onClick={() => setIndex(2)}>Back</p>
                             <button type='submit' className='next-step-btn'>Next Step <img src={arrow} alt="" /></button>
+                            <p className='back-btn' onClick={() => setIndex(2)}>Back</p>
                         </div>
                     </form>}
                 <p className='already-have-account'>Already have an account? <Link to="/login">Login here</Link> </p>

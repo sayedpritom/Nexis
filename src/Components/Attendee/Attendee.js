@@ -6,7 +6,7 @@ const Attendee = (props) => {
 
     const [detailsOpen, setDetailsOpen] = useState(false);
 
-    const { attendance, branch, id, name, position, profile_pic, username } = props.data
+    const { attendance, id, name, position } = props.data
 
     const details = [];
 
@@ -14,8 +14,6 @@ const Attendee = (props) => {
 
         details.push({ date: key, info: attendance[key] })
     }
-
-    console.log(details);
 
     return (
         <>

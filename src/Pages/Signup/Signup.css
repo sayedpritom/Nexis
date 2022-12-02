@@ -131,4 +131,10 @@
         margin-bottom: 40px;
         transform: translateY(0);
     }
+
+    .back-btn {
+        display: block;
+        position: static;
+        margin-top: 50px;
+    }
 }
