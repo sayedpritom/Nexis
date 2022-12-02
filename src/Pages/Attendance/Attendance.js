@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import AttendanceDetails from '../../Components/AttendanceDetails/AttendanceDetails';
 import Attendee from '../../Components/Attendee/Attendee';
 import './Attendance.css'
 
@@ -38,10 +39,9 @@ const Attendance = () => {
                     <th>Attendance</th>
                 </tr>
                 {
-                    attendance.map(data => <Attendee data ={data}/>)
+                    attendance.map(data => <Attendee data={data} />)
                 }
             </table>
-
         </div>
     );
 };

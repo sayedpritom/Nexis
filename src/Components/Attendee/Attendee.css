@@ -17,3 +17,45 @@
 .attendance-btn:hover {
     background-color: rgb(32, 106, 255);
 }
+
+.details {
+    position: fixed;
+    max-width: 600px;
+    height: 500px;
+    overflow: scroll;
+    width: 90%;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.table-details {
+    border-spacing: 0px;
+
+}
+
+.details-tr-heading {
+    background-color: rgb(62, 126, 255);
+    position: sticky;
+    top: 0;
+}
+
+.details-date {
+    width: 150px;
+}
+
+.close-btn {
+    z-index: 1000000;
+    position: sticky;
+    left: 100%;
+    bottom: 00px;
+    background-color: rgb(62, 126, 255);
+    color: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
