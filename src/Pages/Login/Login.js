@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import peopleImage from '../../Images/people.png'
 import './Login.css'
 
@@ -26,7 +27,8 @@ const Login = () => {
             .then(response => response.json())
             .then(data => {
                 localStorage.setItem("access_token", data.access_token)
-                navigate('/attendance')
+                !data.error ? toast.success('Login Successful') : toast.error(data.error)
+                !data.error && navigate('/attendance')
             })
     }
 
