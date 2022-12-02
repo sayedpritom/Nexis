@@ -1,6 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import Attendee from '../../Components/Attendee/Attendee';
+import './Attendance.css'
 
 const Attendance = () => {
+
+    const [attendance, setAttendance] = useState([]);
+
     useEffect(() => {
         fetch('https://test.nexisltd.com/test', {
             method: 'GET',
@@ -10,11 +15,32 @@ const Attendance = () => {
             },
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                const array = []
+                for (let key in data) {
+                    array.push(data[key])
+                }
+                setAttendance(array)
+            })
     }, [])
-    console.log(localStorage.getItem("access_token"));
+
+    console.log(attendance);
+
     return (
         <div>
+            <h1>Attendance Information</h1>
+            <table className='table'>
+                <tr className='table-head'>
+                    <th>Profile Picture</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Attendance</th>
+                </tr>
+                {
+                    attendance.map(data => <Attendee data ={data}/>)
+                }
+            </table>
 
         </div>
     );
