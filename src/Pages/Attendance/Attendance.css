@@ -57,3 +57,12 @@ th {
 td {
     color: rgb(128, 128, 128);
 }
+
+/* Responsive Styles */
+
+
+@media only screen and (max-width: 600px) {
+    .profile-pic-row {
+        width: auto;
+    }
+  }

@@ -59,3 +59,20 @@
     border: none;
     cursor: pointer;
 }
+
+
+
+/* Responsive Styles */
+
+
+@media only screen and (max-width: 600px) {
+    .profile_pic>img {
+        width: 30px;
+        height: 30px;
+        border-radius: 200px;
+        object-fit: cover;
+    }
+    .close-btn {
+        width: auto;
+    }
+  }

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 import peopleImage from '../../Images/people.png'
-import arrow from '../../Images/Arrow.svg'
-import { toast } from 'react-toastify';
 import './Login.css'
 
 
 const Login = () => {
+
     let navigate = useNavigate();
+
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -36,13 +36,14 @@ const Login = () => {
             <div className='form-container'>
                 <h3 className='sign-up-form'>Login Form</h3>
                 <form onSubmit={handleLogin}>
-                        <input required autoFocus onChange={(e) => setEmail(e.target.value)} type="text" value={email} placeholder='Write Email Address' />
-                        <br />
-                        <input required onChange={(e) => setPassword(e.target.value)} type="text" value={password} placeholder='Write Password' />
-                        <div className="buttons">
-                            <button type='submit' className='next-step-btn'>Login</button>
-                        </div>
-                    </form>
+                    <input required autoFocus onChange={(e) => setEmail(e.target.value)} type="text" value={email} placeholder='Write Email Address' />
+                    <br />
+                    <input required onChange={(e) => setPassword(e.target.value)} type="text" value={password} placeholder='Write Password' />
+                    <div className="buttons">
+                        <button type='submit' className='next-step-btn'>Login</button>
+                    </div>
+                    <p className='already-have-account'>Don't have an account? <Link to="/signup">SIGN UP HERE</Link> </p>
+                </form>
             </div>
         </div>
     );

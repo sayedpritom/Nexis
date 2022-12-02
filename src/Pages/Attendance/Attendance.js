@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import AttendanceDetails from '../../Components/AttendanceDetails/AttendanceDetails';
 import Attendee from '../../Components/Attendee/Attendee';
+import Loading from '../../Components/Loading/Loading';
 import './Attendance.css'
 
 const Attendance = () => {
 
+    const [loading, setLoading] = useState(true)
     const [attendance, setAttendance] = useState([]);
 
     useEffect(() => {
@@ -22,10 +24,15 @@ const Attendance = () => {
                     array.push(data[key])
                 }
                 setAttendance(array)
+                setLoading(false)
             })
     }, [])
 
     console.log(attendance);
+
+    if(loading) {
+        return  <Loading/>
+    }
 
     return (
         <div>
