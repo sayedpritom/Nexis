@@ -1,8 +1,59 @@
+.attendance-heading {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    max-width: 480px;
+    width: 90%;
+    padding: 20px 0;
+    color: white;
+    background: #1678CB;
+    border-radius: 5px;
+    text-align: center;
+    margin: 60px auto;
+
+}
+
 .table {
     width: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-spacing: 0;
+    text-align: left;
+    margin-bottom: 50px;
+    border-radius: 20px;
 }
 
 .table-head {
-    background-color: rgb(16, 145, 225);
+    background-color: rgb(62, 126, 255);
+    height: 65px;
+    /* padding: 50px; */
+    border-radius: 20px;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+.table-head > th {
+    font-size: 16px;
+}
+
+.profile-pic-row {
+    width: 200px;
+    padding: 0 20px;
+}
+
+tr:hover {
+    background-color: aliceblue;
+}
+
+td, th {
+    padding: 10px 30px;
+    font-size: 14px;
+}
+
+th {
+    color: white;
+}
+
+td {
+    color: rgb(128, 128, 128);
 }

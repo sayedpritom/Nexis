@@ -28,10 +28,10 @@ const Attendance = () => {
 
     return (
         <div>
-            <h1>Attendance Information</h1>
+            <h1 className='attendance-heading'>Attendance Information</h1>
             <table className='table'>
                 <tr className='table-head'>
-                    <th>Profile Picture</th>
+                    <th className='profile-pic-row'>Profile Picture</th>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Position</th>

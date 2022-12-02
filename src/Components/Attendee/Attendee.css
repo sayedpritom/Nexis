@@ -1,6 +1,19 @@
-.profile_pic {
+.profile_pic>img {
     width: 70px;
     height: 70px;
     border-radius: 200px;
     object-fit: cover;
+}
+
+.attendance-btn {
+    background-color: rgb(62, 126, 255);
+    color: white;
+    cursor: pointer;
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.attendance-btn:hover {
+    background-color: rgb(32, 106, 255);
 }
