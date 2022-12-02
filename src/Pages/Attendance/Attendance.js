@@ -30,24 +30,28 @@ const Attendance = () => {
 
     console.log(attendance);
 
-    if(loading) {
-        return  <Loading/>
+    if (loading) {
+        return <Loading />
     }
 
     return (
         <div>
             <h1 className='attendance-heading'>Attendance Information</h1>
             <table className='table'>
-                <tr className='table-head'>
-                    <th className='profile-pic-row'>Profile Picture</th>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Position</th>
-                    <th>Attendance</th>
-                </tr>
-                {
-                    attendance.map(data => <Attendee data={data} />)
-                }
+                <thead className='table-head'>
+                    <tr className='table-row'>
+                        <th className='profile-pic-row table-heading'>Profile Picture</th>
+                        <th className='table-heading'>Id</th>
+                        <th className='table-heading'>Name</th>
+                        <th className='table-heading'>Position</th>
+                        <th className='table-heading'>Attendance</th>
+                    </tr>
+                </thead>
+                <tbody className='tablebody'>
+                    {
+                        attendance.map(data => <Attendee data={data} />)
+                    }
+                </tbody>
             </table>
         </div>
     );

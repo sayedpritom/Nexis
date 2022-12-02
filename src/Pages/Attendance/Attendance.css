@@ -61,8 +61,30 @@ td {
 /* Responsive Styles */
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .profile-pic-row {
         width: auto;
     }
+
+    .table-head, .table-row, .table-heading, .tablebody, .profile_pic, .employee-id, .employee-name, .employee-position, .employee-attendance {
+        display: block;
+        position: relative;
+    }
+
+     .employee-position, .employee-attendance {
+        display: inline-block;
+    }
+
+    .table-head {
+        display: none;
+    }
+
+    tbody tr {
+        padding: 50px 0;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f5f5f5;
+    }
+
   }

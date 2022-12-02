@@ -20,7 +20,8 @@
 
 .details {
     position: fixed;
-    max-width: 600px;
+    z-index: 1000;
+    max-width: 700px;
     height: 500px;
     overflow: scroll;
     width: 90%;
@@ -65,14 +66,68 @@
 /* Responsive Styles */
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .profile_pic>img {
         width: 30px;
         height: 30px;
         border-radius: 200px;
         object-fit: cover;
     }
-    .close-btn {
-        width: auto;
+
+    .profile_pic::before {
+        content: "Profile Picture";
+        position: absolute;
+        top: 15px;
+        left: 30px;
+
+    }
+
+    .profile_pic, .employee-id {
+        padding-left: 250px;
+    }
+
+
+    .employee-id::before {
+        content: "Id";
+        position: absolute;
+        top: 17px;
+        left: 30px;
+    }
+
+    .employee-id {
+        padding-left: 259px;
+    }
+
+    .employee-name::before {
+        content: "Name";
+        position: absolute;
+        top: 17px;
+        left: 30px;
+    }
+
+    .employee-name {
+        padding-left: 259px;
+    }
+
+    .employee-position::before {
+        content: "Position";
+        position: absolute;
+        top: 17px;
+        left: 30px;
+    }
+
+    .employee-position {
+        padding-left: 259px;
+    }
+
+    .employee-attendance::before {
+        content: "Attendance";
+        position: absolute;
+        top: 17px;
+        left: 30px;
+    }
+
+    .employee-attendance {
+        padding-left: 259px;
     }
   }
